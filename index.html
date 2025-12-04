@@ -1,138 +1,149 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Розклад</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f4f7;
-            margin: 0;
-            padding: 20px;
-        }
+<meta charset="UTF-8">
+<title>Розклад</title>
 
-        h1 {
-            text-align: center;
-            font-weight: 600;
-            margin-bottom: 25px;
-            color: #222;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #fff;
+    }
 
-        .schedule {
-            width: 100%;
-            max-width: 1000px;
-            margin: auto;
-            border-collapse: separate;
-            border-spacing: 0 10px;
-        }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+        font-size: 18px;
+    }
 
-        .schedule thead th {
-            background: #ffffff;
-            padding: 12px;
-            border-bottom: 3px solid #4a90e2;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
+    th, td {
+        border: 2px solid #000;
+        padding: 6px 10px;
+    }
 
-        .schedule tbody tr {
-            background: #fff;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-        }
+    th.day {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-weight: bold;
+        width: 30px;
+        text-align: center;
+        font-size: 20px;
+    }
 
-        .schedule td {
-            padding: 15px 10px;
-            text-align: center;
-            font-size: 15px;
-        }
+    td.number {
+        width: 35px;
+        text-align: center;
+        font-weight: bold;
+    }
 
-        /* Перша колонка з часом */
-        .time {
-            font-weight: bold;
-            background: #e9eef5;
-            border-radius: 8px 0 0 8px;
-        }
+    td.subject {
+        height: 45px;
+    }
+</style>
 
-        /* Заповнені пари */
-        .class-entry {
-            background: #ffffff;
-        }
-
-        /* Порожні */
-        .free-time {
-            background: #f0f0f0;
-            font-style: italic;
-            color: #777;
-        }
-
-        /* Остання клітинка в рядку */
-        .schedule td:last-child {
-            border-radius: 0 8px 8px 0;
-        }
-    </style>
 </head>
 <body>
 
-<h1>Розклад Занять</h1>
+<table>
 
-<table class="schedule">
-    <thead>
-        <tr>
-            <th>Час</th>
-            <th>Пн</th>
-            <th>Вт</th>
-            <th>Ср</th>
-            <th>Чт</th>
-            <th>Пт</th>
-        </tr>
-    </thead>
+    <!-- ПОНЕДІЛОК -->
+    <tr>
+        <th class="day" rowspan="5">Понеділок</th>
+        <td class="number">1</td>
+        <td class="subject">Інформ(ІІ)</td>
+    </tr>
+    <tr>
+        <td class="number">2</td>
+        <td class="subject">Географія</td>
+    </tr>
+    <tr>
+        <td class="number">3</td>
+        <td class="subject">Алгоритми (л)</td>
+    </tr>
+    <tr>
+        <td class="number">4</td>
+        <td class="subject">Комп графіка(пр)</td>
+    </tr>
+    <tr>
+        <td class="number"></td>
+        <td class="subject">Фіз культ</td>
+    </tr>
 
-    <tbody>
-        <tr>
-            <td class="time">08:30 - 09:50</td>
-            <td class="free-time">Вікно</td>
-            <td class="class-entry">Укр. літ</td>
-            <td class="class-entry">Основи програмування (пр)</td>
-            <td class="class-entry">Інформатика</td>
-            <td class="class-entry">Фізика / Комп. графіка</td>
-        </tr>
+    <!-- ВІВТОРОК -->
+    <tr>
+        <th class="day" rowspan="4">Вівторок</th>
+        <td class="number">1</td>
+        <td class="subject">Укр літ</td>
+    </tr>
+    <tr>
+        <td class="number">2</td>
+        <td class="subject">Фізика</td>
+    </tr>
+    <tr>
+        <td class="number">3</td>
+        <td class="subject">Основи програмування(л)</td>
+    </tr>
+    <tr>
+        <td class="number">4</td>
+        <td class="subject">Укр мова</td>
+    </tr>
 
-        <tr>
-            <td class="time">10:00 - 11:20</td>
-            <td class="class-entry">Географія</td>
-            <td class="class-entry">Фізика</td>
-            <td class="class-entry">Алгоритми (пр)</td>
-            <td class="class-entry">Історія України</td>
-            <td class="class-entry">Іноземна мова</td>
-        </tr>
+    <!-- СЕРЕДА -->
+    <tr>
+        <th class="day" rowspan="4">Середа</th>
+        <td class="number">1</td>
+        <td class="subject">Основи програмування(пр)</td>
+    </tr>
+    <tr>
+        <td class="number">2</td>
+        <td class="subject">Алгоритми(пр)</td>
+    </tr>
+    <tr>
+        <td class="number">3</td>
+        <td class="subject">Технології розробки</td>
+    </tr>
+    <tr>
+        <td class="number">4</td>
+        <td class="subject">Комп графіка(пр)</td>
+    </tr>
 
-        <tr>
-            <td class="time">11:20 - 12:00</td>
-            <td class="free-time">Обід</td>
-            <td class="free-time">Обід</td>
-            <td class="free-time">Обід</td>
-            <td class="free-time">Обід</td>
-            <td class="free-time">Обід</td>
-        </tr>
+    <!-- ЧЕТВЕР -->
+    <tr>
+        <th class="day" rowspan="3">Четвер</th>
+        <td class="number">1</td>
+        <td class="subject">Інформ(І)</td>
+    </tr>
+    <tr>
+        <td class="number">2</td>
+        <td class="subject">Історія України</td>
+    </tr>
+    <tr>
+        <td class="number">3</td>
+        <td class="subject">Фіз культ</td>
+    </tr>
 
-        <tr>
-            <td class="time">12:00 - 13:20</td>
-            <td class="class-entry">Алгоритми (лекція)</td>
-            <td class="class-entry">Основи Програмування (лекція)</td>
-            <td class="class-entry">ТРПЗ (пр)</td>
-            <td class="class-entry">Фізкультура</td>
-            <td class="class-entry">ТРПЗ (лекція)</td>
-        </tr>
+    <!-- П'ЯТНИЦЯ -->
+    <tr>
+        <th class="day" rowspan="4">Пʼятниця</th>
+        <td class="number">1</td>
+        <td class="subject">Фізика</td>
+    </tr>
+    <tr>
+        <td class="number">2</td>
+        <td class="subject">Комп графіка(л)</td>
+    </tr>
+    <tr>
+        <td class="number">3</td>
+        <td class="subject">Іноз мова(I)/Іноз мова(II)</td>
+    </tr>
+    <tr>
+        <td class="number">4</td>
+        <td class="subject">Технології розробки ПЗ(л) / Математика</td>
+    </tr>
 
-        <tr>
-            <td class="time">13:30 - 14:50</td>
-            <td class="class-entry">Комп. графіка / Фізкультура</td>
-            <td class="class-entry">Укр. мова</td>
-            <td class="class-entry">Комп. графіка (пр)</td>
-            <td class="free-time">Вікно</td>
-            <td class="class-entry">Математика</td>
-        </tr>
-    </tbody>
 </table>
 
 </body>
